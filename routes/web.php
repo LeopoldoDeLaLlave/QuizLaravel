@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pagina01');
 });
+
+Route::get('/dos', function () {
+    return view('pagina02');
+});
+

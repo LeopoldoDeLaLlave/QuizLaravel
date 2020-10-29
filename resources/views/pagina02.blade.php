@@ -12,7 +12,7 @@
 
 @section('contenido')
 
-    <p>Esta en el body 2</p>
+    <p>{{$tema}}</p>
 
     <a href="{{url('/')}}" class="btn btn-xs btn-info pull-right">1</a>
 

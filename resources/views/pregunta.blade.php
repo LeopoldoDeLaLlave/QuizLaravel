@@ -36,7 +36,7 @@
 
 
     function chequeaRespuesta(_respuesta){
-    $('button').addClass('disabled').prop("onclick", null);
+            $('button').addClass('disabled').prop("onclick", null);
             if (_respuesta == pregunta[0].correcta ){ 
                 $('#'+_respuesta).removeClass('btn-primary').addClass('btn-success');
                 $('#preguntas').append('<button class="btn btn-block btn-warning " onclick="sigue()"> PREGUNTA SIGUIENTE  </button>');   
@@ -47,12 +47,22 @@
                 $('#preguntas').append('<button class="btn btn-block btn-dark " onclick="pierde()"> PREGUNTA SIGUIENTE  </button>');   
             }
         }
-    function sigue(){
-        window.location.replace(href="{{ url('pregunta', [$tema, Crypt::encrypt($marcador=$marcador+1)]) }}");
-    }
-    function pierde(){
+
+
+        function pierde(){
+        console.log("hola2");
         window.location.replace(href="{{ url('pregunta', [$tema, Crypt::encrypt($marcador)]) }}");
     }
+
+        function sigue(){
+        console.log("hola");
+        window.location.replace(href="{{ url('pregunta', [$tema, Crypt::encrypt($marcador=$marcador+1)]) }}");
+    }
+
+
+
+    
+
 
     //el siguiente método controla la barra de tiempo
     var segundo = 1;
